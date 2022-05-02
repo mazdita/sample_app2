@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /* forms */
 input, textarea, select, .uneditable-input {
 border: 1px solid #bbb;
@@ -142,7 +143,7 @@ body {
         text-decoration: none;
         }
 
-        /* footer */
+/* footer */
         footer {
         margin-top: 45px;
         padding-top: 5px;
@@ -166,3 +167,20 @@ body {
         float: left;
         margin-left: 15px;
         }
+        @media (max-width: 800px) {
+        footer {
+            small {
+                display: block;
+                float: none;
+                margin-bottom: 1em;
+                }u
+                l {
+                float: none;
+                padding: 0;
+                li {
+                float: none;
+                margin-left: 0;
+                }
+                }
+                }
+                }
