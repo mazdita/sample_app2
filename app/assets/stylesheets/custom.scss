@@ -2,17 +2,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+/* Users index */
+.users {
+list-style: none;
+margin: 0;
+li {
+overflow: auto;
+padding: 10px 0;
+border-bottom: 1px solid $gray-lighter;
+}
+}
 /* forms */
 input, textarea, select, .uneditable-input {
 border: 1px solid #bbb;
 width: 100%;
 margin-bottom: 15px;
-@include box_sizing;
+
 }
+
 input {
 height: auto !important;
 }
+
 #error_explanation {
 color: red;
 ul {
@@ -26,6 +37,7 @@ margin: 0 0 30px 0;
 color: $state-danger-text;
 }
 }
+
 checkbox {
     margin-top: -10px;
     margin-bottom: 10px;
@@ -114,6 +126,9 @@ $gray-medium-light: #eaeaea;
     width: 100%;
     margin-top: 45px;
     @include box_sizing;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     }
 
 /* universal */

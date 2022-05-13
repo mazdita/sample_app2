@@ -6,8 +6,9 @@ class User < ApplicationRecord
     validates :email, presence: true, length: { maximum: 255 },
     format: { with: VALID_EMAIL_REGEX },
     uniqueness: true
+    
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
     class << self
     #Returns the hash digest of the given string.
     def digest(string)
@@ -15,6 +16,7 @@ class User < ApplicationRecord
     BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
     end
+end
 
     # Returns a random token.
     def new_token
