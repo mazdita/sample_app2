@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
-    end
+  end
 
   def new
     @user = User.new
@@ -56,15 +56,11 @@ class UsersController < ApplicationController
       end
 
 
-      private
-      def user_params
-      params.require(:user).permit(:name, :email, :password,
-      :password_confirmation)
-      end
-#Confirms an admin user.
-def admin_user
-redirect_to(root_url) unless current_user.admin?
-end
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
 
   def following
     @title = "Following"
@@ -99,4 +95,8 @@ end
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> user-microposts
