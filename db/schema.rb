@@ -48,10 +48,6 @@ ActiveRecord::Schema.define(version: 2022_05_22_200504) do
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
-<<<<<<< HEAD
-
-=======
->>>>>>> user-microposts
   create_table "relationships", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
@@ -61,10 +57,6 @@ ActiveRecord::Schema.define(version: 2022_05_22_200504) do
     t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
-<<<<<<< HEAD
-
-=======
->>>>>>> user-microposts
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
